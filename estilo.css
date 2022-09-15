@@ -111,7 +111,7 @@ h2 {
 }
 
 #saida {
-    /*border: 1px solid red;*/
+    /* border: 1px solid red; */
     width: 60%;
     height: 40%;
     margin: 24px auto;
@@ -129,6 +129,23 @@ h2 {
 #saida p {
     width: 55%;
     margin: 10px auto;
+}
+
+#saida button {
+    width: 8%;
+    min-width: 8%;
+    height: 30px;
+    display: inline;
+    margin-left: 250px;
+    margin-top: 7px;
+    background: rgb(26, 71, 174);
+    color: #fff;  
+    transition: all 0.5;
+}
+
+#saida button:hover {
+    background: #fff;
+    color: blueviolet;
 }
 
 /* Fim do corpo da página */
