@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>key frames</title>
+    <style>
+        /*
+        Código somente para testes e estudos Projeto final sera apagado!!!!
+        */
+         h1 {
+        font-size: 24px;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: typewriter 2s steps(15) both  2.3ms ,
+          blink 700ms steps(15) infinite normal;
+        border-right: 5px solid red;
+      }
+      @keyframes typewriter {
+        from {
+          width: 0%;
+        }
+        to {
+          width: 12.5%;
+        }
+      }
+      @keyframes blink {
+        from {
+          border-color: rgb(255, 255, 255);
+        }
+    }
+    </style>
+</head>
+<body>
+    <h1>teste de animação</h1>
+</body>
+</html>

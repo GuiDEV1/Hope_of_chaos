@@ -93,11 +93,29 @@ body {
     src: url(arquivos/PublicPixel-z84yD.ttf);
 }
 h1 {
-    text-align: center;
     margin: 14px;
     color: rgb(26, 71, 174);
     font-family:  Arcade;
     font-size: 23px;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typewriter 2s steps(13) both  1.5ms ,
+    blink 700ms steps(13) infinite normal;
+    border-right: 5px solid black;
+    margin: 10px auto;
+}
+@keyframes typewriter {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 21%;
+    }
+  }
+  @keyframes blink {
+    from {
+      border-color: rgb(255, 255, 255);
+    }
 }
 
 .scd {
