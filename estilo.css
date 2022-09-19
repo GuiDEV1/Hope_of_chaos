@@ -18,8 +18,9 @@ header {
 }
 
 header img {
-    width: 17%;
-    max-width: 15%;
+    width: 17vw;
+    min-width: none;
+    max-width: 15vw;
     min-inline-size: 10%;
 }
 
@@ -41,15 +42,18 @@ header img {
  /* Menu para alterar entre temo claro escruro alto contraste! */
  #mudarcor {
     width: 12%;
+    min-width: 12%;
     max-height: 14%;
-    height: 23px;
+    height: 16%;
     background-color: hsl(0, 0%, 80%);
     margin-left: 13px;
     border-radius: 20px 20px;
+    padding: 3px;
  }
 
  #mudarcor button {
    width: 18px;
+   min-width: 18px;
    max-width: 18px;
    border-radius: 50%;
    margin-left: 27px;
@@ -60,8 +64,8 @@ header img {
  }
 
 #mudarcor .mudarcorp {
-    width: 18px;
-   max-width: 18px;
+    width: 12%;
+   max-width: 10%;
    border-radius: 50%;
    margin-left: 27px;
    display: inline;
@@ -109,7 +113,7 @@ h1 {
       width: 0%;
     }
     to {
-      width: 21%;
+      width: 22%;
     }
   }
   @keyframes blink {
@@ -150,8 +154,9 @@ h2 {
 }
 
 #saida button {
-    width: 8%;
-    min-width: 8%;
+    width: 10vw;
+    min-width: 9%;
+    max-width: 10%;
     height: 30px;
     display: inline;
     margin-left: 250px;
@@ -169,6 +174,10 @@ h2 {
     border: 1px solid rgb(190, 16, 196);
 }
 
+body {
+    overflow-x: hidden;
+}
+
 /* Fim do corpo da página */
 
 /* rodapé */
@@ -176,7 +185,8 @@ h2 {
 footer {
     border-top: 2px solid rgba(212,20,233,1 );
     width: 100%;
-    height: 100px;
+    min-width: 100vw;
+    height: 15px;
 }
 
 h3 {
@@ -216,6 +226,8 @@ footer a:hover {
 
 #til img {
    width: 24%;
+   max-width: 24%;
+   min-width: 25%;
    padding: 5px;
    transform: scale(1.0);
     transition: 0.5s;
