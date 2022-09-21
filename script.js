@@ -7,6 +7,12 @@ function mudarCor () {
 function removeCor () {
     var corpo = document.getElementById('corpo');
     corpo.classList.remove('black');
+    corpo.classList.remove("autoContraste");
+}
+
+function autoContraste() {
+    var corpo = document.getElementById('corpo');
+    corpo.classList.add('autoContraste');
 }
 /****************fim****************/
 
