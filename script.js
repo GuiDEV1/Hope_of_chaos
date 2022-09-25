@@ -26,7 +26,7 @@ function prologo() {
 
 function prologo1() {
     let prologo1 = document.getElementById('saida');
-    prologo1.innerHTML =  "<img src='arquivos/reino2.jpg'> <p>Como todo reino e seus mistérios, havia algo que rondava a imaginação e a curiosidade de seu povo: uma lenda de um suposto medalhão, de poder antigo e descochecido. Suspeitam eles que apenas a realeza possui maiores informações desta relíquia. Porém com o espalhar da lenda, a mesma atrai os olhos de desconhecido, cobertos de ganância e ódio direcionados ao reino. </p> <button onclick='prologo2()'>Avançar</button>";
+    prologo1.innerHTML =  "<img src='arquivos/reino2.jpg'> <p>Como todo reino e seus mistérios, havia algo que rondava a imaginação e a curiosidade de seu povo: uma lenda de um suposto medalhão, de poder antigo e desconhecido. Suspeitam eles que apenas a realeza possui maiores informações desta relíquia. Porém com o espalhar da lenda, a mesma atrai os olhos de desconhecido, cobertos de ganância e ódio direcionados ao reino. </p> <button onclick='prologo2()'>Avançar</button>";
 }
 
 function prologo2() {
@@ -36,7 +36,7 @@ function prologo2() {
 
 function prologo3 () {
   let prologo3 = document.getElementById('saida');
-  prologo3.innerHTML = "<img src= 'arquivos/prologo3_1.jpg'> <p>Após acontecimento a polulação presencia estranhas mudanças em seu lar. Criaturas medievais e maquinas futuristicas passam a espalhar medo desespero a todos. O rei juntamente a outros de grande influência decidiram então criar um torneio, e que o vencedor final receberia a missão de ir em busca das peças restantes. Casom então, concluido a tafefa com glória, receberia a grande riqueza e alteração permanente de seu status. O novo herói da coroa e dos eu povo.</p> <button onclick='inicio()'>Avançar</button>" ;
+  prologo3.innerHTML = "<img src= 'arquivos/prologo3_1.jpg'> <p>Após acontecimento a polulação presencia estranhas mudanças em seu lar. Criaturas medievais e maquinas futurísticas passam a espalhar medo desespero a todos. O rei juntamente a outros de grande influência decidiram então criar um torneio, e que o vencedor final receberia a missão de ir em busca das peças restantes. Caso então, concluido a tafefa com glória, receberia a grande riqueza e alteração permanente de seu status. O novo herói da coroa e de seu povo.</p> <button onclick='inicio()'>Avançar</button>" ;
 }
 // Fim do prólogo 
 
@@ -50,10 +50,22 @@ function inicio () {
 
 function fim1 () {
    let fim1 =  document.getElementById('saida');
-   fim1.innerHTML = " <h3> Caminhamos até a passagem <span class='scd'>-secreta!</span></h3> <button> Avançar </button>";
+   fim1.innerHTML = " <h3> Caminhamos até a passagem <span class='scd'>-secreta!</span></h3> <p>O rei ordenou que saíssemos pela passagem secreta para não chamar atenção!.</p> <button onclick='fim2()'> Avançar </button>";
 }
+
+function fim2 () {
+    let fim2 =  document.getElementById('saida');
+    fim2.innerHTML = "<p>No meio do trajeto encontramos um urso!. <br><br> - ops não peguei o baú, um beijo e um pão de quijo pra mim :(</p> <button  onclick='morte0()'>BEM VINDO AO GIGANTE!</button>" ;
+}
+
+function morte0 () {
+ let  morte_0 = document.getElementById('saida');
+ morte_0.innerHTML = "<img src=''> <button  onclick='prologo()'>Recomeçar</button>";
+}
+
+
 
 function inicio1 () {
     let inicio1 = document.getElementById('saida');
-    inicio.innerHTML = "<img src='arquivos/reino2.jpg'> <h3>Escolha-sua-<span class = 'scd'> classe:</span></h3>  <button>Guerreiro</button> <button>Arqueiro</button> <button>Mago</button>" ;
+    inicio1.innerHTML = "<img src='arquivos/reino2.jpg'> <h3>Escolha-sua-<span class = 'scd'> classe:</span></h3>  <button>Guerreiro</button> <button>Arqueiro</button> <button>Mago</button>" ;
 }

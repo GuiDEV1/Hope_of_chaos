@@ -171,8 +171,11 @@ h2 {
 
 #saida button {
     width: 10vw;
-    min-width: 9%;
-    max-width: 10%;
+    height: 30%;
+    min-width: 20%;
+    min-height: 25%;
+    max-width: 30%;
+    max-height: 25%;
     height: 30px;
     display: inline;
     margin-left: 235px;
