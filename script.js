@@ -47,34 +47,71 @@ function prologo3 () {
 // Inicio - hope of chaos 
 
 function inicio () {
+ // onload('<h1></h1>');  
   let inicio = document.getElementById('saida');
-  inicio.innerHTML = "  <button onclick='inicio1()'>Adquirir baú </button> <button onclick='fim1()'>Negar baú</button>";
+  inicio.innerHTML = "  <img src='cenas_cap/abrirbauSouN.png'> <button onclick='inicio1()'>Adquirir baú </button> <button onclick='fim1()'>Negar baú</button>";
 }
-// Primeiro final!!
+/************      Primeiro final!!      **************/
 function fim1 () {
    let fim1 =  document.getElementById('saida');
-   fim1.innerHTML = " <h3> Caminhamos até a passagem <span class='scd'>-secreta!</span></h3> <p>O rei ordenou que saíssemos pela passagem secreta para não chamar atenção!.</p> <button onclick='fim2()'> Avançar </button>";
+   fim1.innerHTML = " <img src='cenas_cap/null saindo.gif'> <h3> Caminhamos até a passagem <span class='scd'>-secreta!</span></h3> <p>O rei ordenou que saíssemos pela passagem secreta para não chamar atenção!.</p> <button onclick='fim2()'> Avançar </button>";
 }
 
 function fim2 () {
     let fim2 =  document.getElementById('saida');
-    fim2.innerHTML = "<p>No meio do trajeto encontramos um urso!. <br><br> - ops não peguei o baú, um beijo e um pão de quijo pra mim :(</p> <button  onclick='morte0()'>BEM VINDO AO GIGANTE!</button>" ;
+    fim2.innerHTML = "<img src='cenas_cap/nullEentrandonacaverna.gif'><p>No meio do trajeto encontramos um urso!. <br><br> - ops não peguei o baú, um beijo e um pão de queijo pra mim :(</p> <button  onclick='morte0()'>BEM VINDO AO GIGANTE!</button>" ;
 }
 
 function morte0 () {
  let  morte_0 = document.getElementById('saida');
- morte_0.innerHTML = "<img src=''> <button  onclick='prologo()'>Recomeçar</button>";
+ morte_0.innerHTML = "<img src='cenas_cap/primeirofinal.gif'> <p class = 'gameOver'>Game over!! você esta morto!!</p> <button  onclick='inicio()'>Recomeçar</button>";
 }
+/******************************** Fim do primeiro final *****************/
 
-// Primeiro Final
-
+// escolha de classe:
 function inicio1 () {
     let inicio1 = document.getElementById('saida');
-    inicio1.innerHTML = "<img src='arquivos/reino2.jpg'> <h3>Escolha-sua-<span class = 'scd'> classe:</span></h3>  <button onclick='inicio2()'>Guerreiro</button> <button>Arqueiro</button> <button>Mago</button>" ;
+    inicio1.innerHTML = "<img src='cenas_cap/escolhaClasse.gif'> <h3>Escolha-sua-<span class = 'scd'> classe:</span></h3>  <button onclick='caminhoGuerreiro()'>Guerreiro</button> <button onclick='caminhoArqueiro()'>Arqueiro</button> <button onclick='caminhoMago()'>Mago</button>" ;
 }
 
-function inicio2 () {
+/*****************   caminho do guerreiro:    ******************/ 
+function caminhoGuerreiro () {
     let inicio2 = document.getElementById('saida');
     name = prompt("Digite o nome do seu personagem!");
-    inicio2.innerHTML = name +  " Conclua sua missão nosso reino depende de você!"  ;
+    inicio2.innerHTML = " <img src='cenas_cap/GuerreiroEscolhido.gif'> <p> <span class = 'nickName'>nome do seu personagem: " + name + "</span> | Rei: Conclua sua missão o reino precisa de você!, para não chamar atenção passe pela passagem secreta atrás do reino.</p>   <button onclick='sairDoReinoGuerreiro()'>Avançar</button>" ;
 }
+
+function sairDoReinoGuerreiro() {
+  let sairDoReino = document.getElementById('saida');
+  sairDoReino.innerHTML = "<img src='cenas_cap/sairDoReinoGue.gif'>" + `<p><span class='nickName'>${name}</span>:Saindo da arena e indo em direção a passagem secreta do reino, para pegarmos o portal para o outro núcleo</p> <button onclick='entrandoNaCavernaGuerreiro()'>Avançar</button>`;
+}
+
+function entrandoNaCavernaGuerreiro() {
+   let entrandoNaCaverna = document.getElementById('saida');
+   entrandoNaCaverna.innerHTML = "<img src='cenas_cap/EntramosNaCavernaGuereiro.gif'>" + `<p><span class='nickName'>${name}</span>: Entra na passagem secreta!</p> <button onclick='explorandoCavernaGuerreiro()'>Avançar</button>`;
+}
+
+function explorandoCavernaGuerreiro() {
+    let explorandoCaverna = document.getElementById('saida');
+    explorandoCaverna.innerHTML = "<img src='cenas_cap/ExplorandoCavernaGuerreiro.gif'>" + `<p><span class='nickName'>${name}</span>: No meio da passagem secreta encontramos um urso, precisamos passar por ele para pegar o portal no fim da caverna!</p> <button onclick='MatarUrsoGuerreiro()'>Usar Espada</button>` ;
+}
+
+function MatarUrsoGuerreiro() {
+    let matarUrso = document.getElementById('saida');
+    matarUrso.innerHTML = "<img src=''>" ;
+}
+/********************* Fim caminho guerreiro *************************/
+
+
+
+
+/******************************** Caminho Arqueiro *************************************/
+
+/******************************** Fim do caminho Arqueiro **************************/
+
+
+
+/******************************** Caminho Mago *************************************/
+
+/******************************** Fim do caminho Mago **************************/
+

@@ -14,7 +14,7 @@ header {
     width: 100%;
     min-width: 100%;
     height: 35%;
-    background:linear-gradient(132deg, rgba(212,20,233,1) 18%, rgba(111,44,173,1) 74%);
+    background:linear-gradient(132deg, #d414e9 18%, #6f2cad 74%);
 }
 
 header img {
@@ -109,7 +109,7 @@ body {
 }
 h1 {
     margin: 14px;
-    color: rgb(26, 71, 174);
+    color: #1a47ae;
     font-family:  Arcade;
     font-size: 23px;
     white-space: nowrap;
@@ -134,7 +134,7 @@ h1 {
 }
 
 .scd {
-    color: rgb(231, 22, 22);font-family: Arcade;
+    color: #e71616;font-family: Arcade;
     src: url(arquivos/PublicPixel-z84yD.ttf);
 }
 
@@ -196,6 +196,17 @@ h2 {
 
 body {
     overflow-x: hidden;
+}
+
+.nickName {
+    font-size: 16.5px;
+    color: rgb(50, 249, 32);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.gameOver {
+    font-family: arcade;
+    color: #e71616;
 }
 
 /* Fim do corpo da página */
