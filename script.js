@@ -98,14 +98,41 @@ function explorandoCavernaGuerreiro() {
 
 function MatarUrsoGuerreiro() {
     let matarUrso = document.getElementById('saida');
-    matarUrso.innerHTML = "<img src=''>" ;
+    matarUrso.innerHTML = "<img src='cenas_cap/AtaqueUrsoGuerreiro.gif'>" + `<p><span class='nickName'>${name}</span>:Use sua espada para atacar o urso!!</p> <button onclick='entraPortalGuerreiro()'>Avançar</button>` ;
 }
+
+function entraPortalGuerreiro() {
+    let entraPortal =  document.getElementById('saida');
+    entraPortal.innerHTML = "<img src='cenas_cap/entraPortalGuerreiro.gif'>" + `<p><span class='nickName'>${name}</span>: Avança para o proximo núcleo do reino que esta no nosso tempo atual, mas com frequente ataques de criaturas, e boatos de um necromante que possui a segunda parte do <strong>medalhão.</strong></p>   <button onclick="ChegandoNoMedievalGuerreiro()">Avançar</button>`;
+}
+
+function ChegandoNoMedievalGuerreiro() {
+    let chegandoNoMedieval = document.getElementById('saida');
+    chegandoNoMedieval.innerHTML = "<img src=''>" + `<p><span class='nickName'>${name}</span>: Tudo em nossa volta muda. Se encontramos em uma floresta.</p> <button onclick="andandoFlorestaGuerreiro()">Avançar</button>`;
+}
+
+// talvez aqui de merda alerta!!!
+
+function andandoFlorestaGuerreiro() {
+    let andandoFloresta = document.getElementById('saida');
+    andandoFloresta.innerHTML = "<img src=''>" + `<p><span class='nickName'>${name}</span>:</p> <button onclick="fomeNaFlorestaGuerreiro()">Avançar</button>`;
+}
+
+function fomeNaFlorestaGuerreiro() {
+    let fomeNaFloresta = document.getElementById('saida');
+    fomeNaFloresta.innerHTML += "<img src=''>" + `<p><span class='nickName'>${name}</span>:</p> <button onclick="fomeNaFlorestaGuerreiro()">Avançar</button>`;
+}
+
+
+
 /********************* Fim caminho guerreiro *************************/
 
 
 
 
 /******************************** Caminho Arqueiro *************************************/
+
+
 
 /******************************** Fim do caminho Arqueiro **************************/
 
