@@ -159,11 +159,30 @@ function irAoVilarejoGuerreiro () {
 // continuação vilarejo!
 function EntrandoVilarejoGuerreiro() {
     let entrandoVilarejo = document.getElementById('saida');
-    entrandoVilarejo.innerHTML = "<img src = 'https://cdn.discordapp.com/attachments/773372240686350356/1027061197226393610/Knight_1.gif'>" + `<p><span class='nickName'>${name}</span>: Entrou na vila!. </p>`;
+    entrandoVilarejo.innerHTML = "<img src = 'https://cdn.discordapp.com/attachments/773372240686350356/1027061197226393610/Knight_1.gif'>" + `<p><span class='nickName'>${name}</span>: Entrou na vila, Habitantes comentam que a taberna costuma ser um lugar movimentado, talvez la haja uma pista ?. </p> <button onclick="caminhaAtabernaGuerreiro()">Ir a taberna</button>`;
 }
 
+function caminhaAtabernaGuerreiro() {
+    let caminhaAtaberna = document.getElementById('saida');
+    caminhaAtaberna.innerHTML = "<img src='https://media.discordapp.net/attachments/834862603792285717/1027067542134587422/Kinght.gif?width=799&height=606'>" + `<p><span class='nickName'>${name}</span>: Caminha até a porta da taberna observando o vilarejo. </p>  <button onclick="entraNaTabernaGuerreiro()">Entrar na taberna</button>`;
+}
+
+function entraNaTabernaGuerreiro() {
+    let entraNataberna = document.getElementById('saida');
+    entraNataberna.innerHTML = "<img src='https://media.discordapp.net/attachments/834862603792285717/1027067759277916250/Knight_2.gif?width=809&height=607'>" + `<p><span class='nickName'>${name}</span>: Entrou na taberna , hum nusco por informações talvez o dono da taberna tenha elas ou aquele sujeito estranho la atrás ? </p>  <button onclick="tomarUmaBrejaGuerreiro()">Tomar uma breja?</button>  <button onclick="falarComDesconhecidoGuerreiro()">Ir direto ao homem estranho</button>`;
+}
+
+function tomarUmaBrejaGuerreiro() {
+    let tomarUmaBreja = document.getElementById('saida');
+    tomarUmaBreja.innerHTML = "<img src='https://media.discordapp.net/attachments/834862603792285717/1027068061485899786/Knight_3.gif?width=809&height=607'>" + `<p><span class='nickName'>${name}</span>: Tomamos nossa breja perguntamos ao dono sobre informações, e ele disse <strong>Dono do bar:</strong> aquele suijeito no fundo da taberna é um homem que pode te dar muitas informações.</p>  <button onclick="falarComDesconhecidoGuerreiro()">Ir ao homem misterioso</button>`;
+}
 /********************* Fim caminho guerreiro *************************/
 
+// ambos vão ao homem misterioso!
+function falarComDesconhecidoGuerreiro() {
+ let falarComDesconhecido = document.getElementById('saida');
+ falarComDesconhecido.innerHTML = "<img src='https://media.discordapp.net/attachments/834862603792285717/1027075381544636476/Knight_4.gif?width=809&height=607'>" + `<p><span class='nickName'>${name}</span>: Vai até o homem misterioso, este homem se chama <i>Darius</i> pedimos informações, ele é um dos guardiões dessas terras <strong>Darius</strong>: sinto muito o que aocnteceu no seu reino quem está por trás disso ira pagar, ouvi um boatos que um necromante foi visto com um objeto brilhoso e invocando criaturas por ai: ele se encontra no topo da montanha.</p>  <button onclick="">Avançar</button>`;
+}
 
 
 
