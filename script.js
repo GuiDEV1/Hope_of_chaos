@@ -113,7 +113,7 @@ function ChegandoNoMedievalGuerreiro() {
 
 function andandoFlorestaGuerreiro() {
     let andandoFloresta = document.getElementById('saida');
-    andandoFloresta.innerHTML = "<img src='cenas_cap/ExplorandoFlorestaGuerreiro.gif'>" + `<p><span class='nickName'>${name}</span>: Explora a floresta poucos passos a frente à vista um vilarejo, la seria um otimo local para buscar informações. Estamos com muita fome essa floresta habitam muitos animais, caçar seria uma otima idea. </p> <button onclick="cacarGuerreiro()">Caçar?</button>  <button onclick="irAoVilarejoGuerreiro">Ir ao vilarejo?</button>`;
+    andandoFloresta.innerHTML = "<img src='cenas_cap/ExplorandoFlorestaGuerreiro.gif'>" + `<p><span class='nickName'>${name}</span>: Explora a floresta poucos passos a frente à vista um vilarejo, la seria um otimo local para buscar informações. Estamos com muita fome essa floresta habitam muitos animais, caçar seria uma otima idea. </p> <button onclick="cacarGuerreiro()">Caçar?</button>  <button onclick="irAoVilarejoGuerreiro()">Ir ao vilarejo?</button>`;
 }
 
 function cacarGuerreiro() {
@@ -135,9 +135,32 @@ function seAproximarAnimalGuerreiro() {
 // caminho true!!!
 function matarAnimalGuerreiro() {
    let matarAnimal = document.getElementById('saida');
+   matarAnimal.innerHTML = "<img src='cenas_cap/matarJavaliGuerreiro.gif'>" + `<p><span class='nickName'>${name}</span>: Você matou o javali , agora partiu fazer aquele churras!!</p> <button onclick="cozinharCarneGuerreiro()">Avançar</button>`;
 }
 
+function cozinharCarneGuerreiro() {
+    let cozinharCarne = document.getElementById('saida');
+    cozinharCarne.innerHTML = "<img src='cenas_cap/CozinharCarneGuerreiro.gif'>" + `<p><span class='nickName'>${name}</span>: Conzinha o animal e come uma parte!. </p>  <button onclick="IrAoVilarejoGuerreiroDaCaca()">Ir ao vilarejo</button>`;
+}
+// Fim caça. 
 
+// Vilarejo vindo da caça!
+function IrAoVilarejoGuerreiroDaCaca() {
+    let irVilarejo = document.getElementById('saida');
+    irVilarejo.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773372240686350356/1027056706443808800/Knight.gif'>" + `<p><span class='nickName'>${name}</span>: Após essa refeição, ta na hora de ir ao vilarejo em busca de infromações. </p>  <button onclick="EntrandoVilarejoGuerreiro()">Avançar</button>`;
+}
+
+// indo ao vilarejo sem caçar!
+function irAoVilarejoGuerreiro () {
+     let diretoAoVilarejo = document.getElementById('saida');
+     diretoAoVilarejo.innerHTML = "<img src ='https://cdn.discordapp.com/attachments/773372240686350356/1027055927200858232/indoAoVilarejoGuerreiro.gif'>" + `<p><span class='nickName'>${name}</span>: Foi em direção ao vilarejo por informações ignorando sua fome.</p>  <button onclick="EntrandoVilarejoGuerreiro()">Avançar</button>` ;
+} 
+
+// continuação vilarejo!
+function EntrandoVilarejoGuerreiro() {
+    let entrandoVilarejo = document.getElementById('saida');
+    entrandoVilarejo.innerHTML = "<img src = 'https://cdn.discordapp.com/attachments/773372240686350356/1027061197226393610/Knight_1.gif'>" + `<p><span class='nickName'>${name}</span>: Entrou na vila!. </p>`;
+}
 
 /********************* Fim caminho guerreiro *************************/
 
