@@ -212,6 +212,153 @@ function atacarAnoesGuerreiro() {
 
 
 /******************************** Caminho Arqueiro *************************************/
+function caminhoArqueiro () {
+    let inicio2 = document.getElementById('saida');
+    name = prompt("Digite o nome do seu personagem!");
+    inicio2.innerHTML = " <img src='https://media.discordapp.net/attachments/773371651885760533/1027056255631634493/ArqueiroEscolhido.gif?width=770&height=578'> <p> <span class = 'nickName'>nome do seu personagem: " + name + "</span> | Rei: Conclua sua missão o reino precisa de você!, para não chamar atenção passe pela passagem secreta atrás do reino.</p>   <button onclick='sairDoReinoArqueiro()'>Avançar</button>" ;
+}
+
+function sairDoReinoArqueiro() {
+  let sairDoReinoArqueiro = document.getElementById('saida');
+  sairDoReinoArqueiro.innerHTML = "<img src='https://media.discordapp.net/attachments/773371651885760533/1027055197752668190/sairDoReinoArqueiro.gif?width=770&height=578'>" + `<p><span class='nickName'>${name}</span>:Saindo da arena e indo em direção a passagem secreta do reino, para pegarmos o portal para o outro núcleo</p> <button onclick='entrandoNaCavernaArqueiro()'>Avançar</button>`;
+}
+
+function entrandoNaCavernaArqueiro() {
+   let entrandoNaCavernaArqueiro = document.getElementById('saida');
+   entrandoNaCavernaArqueiro.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027056256508243999/EntramosNaCavernaArqueiro.gif'>" + `<p><span class='nickName'>${name}</span>: Entra na passagem secreta!</p> <button onclick='explorandoCavernaArqueiro()'>Avançar</button>`;
+}
+
+function explorandoCavernaArqueiro() {
+    let explorandoCavernaArqueiro = document.getElementById('saida');
+    explorandoCavernaArqueiro.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027055201443651584/ExplorandoCavernaArqueiro.gif'>" + `<p><span class='nickName'>${name}</span>: No meio da passagem secreta encontramos um urso, precisamos passar por ele para pegar o portal no fim da caverna!</p> <button onclick='MatarUrsoArqueiro()'>Usar Arco</button>` ;
+}
+
+function MatarUrsoArqueiro() {
+    let MatarUrsoArqueiro = document.getElementById('saida');
+    MatarUrsoArqueiro.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027056834516881408/AtaqueArqueiro.gif'>" + `<p><span class='nickName'>${name}</span>: :Use seu arco para atacar o urso!! </p> <button onclick='entraPortalArqueiro()'>Avançar</button>` ;
+}
+
+function entraPortalArqueiro() {
+    let entraPortalArqueiro = document.getElementById('saida');
+    entraPortalArqueiro.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027056834948903002/entrarPortalArqueiro.gif'>" + `<p><span class='nickName'>${name}</span>:  Avança para o proximo núcleo do reino que esta no nosso tempo atual, mas com frequente ataques de criaturas, e boatos de um necromante que possui a segunda parte do <strong>medalhão.</strong></p> <button onclick='chegandoNoMedievalArqueiro()'>Avançar</button>` ;
+}
+
+/********************************* Floresta Medieval Arqueiro ************************/
+
+function chegandoNoMedievalArqueiro() {
+    let chegandoNoMedievalArqueiro = document.getElementById('saida');
+    chegandoNoMedievalArqueiro.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027055201011638292/FlorestaArqueiro.gif'>" + `<p><span class='nickName'>${name}</span>: Tudo em nossa volta muda. Se encontramos em uma floresta.</p> <button onclick='andandoFlorestaArqueiro()'>Avançar</button>` ;
+}
+
+function andandoFlorestaArqueiro() {
+    let andandoFloresta = document.getElementById('saida');
+    andandoFloresta.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027056833589940244/EncontrarVilaArqueiro.gif'>" + `<p><span class='nickName'>${name}</span>:Explora a floresta poucos passos a frente à vista um vilarejo, la seria um otimo local para buscar informações. Estamos com muita fome essa floresta habitam muitos animais, caçar seria uma otima idea.</p> <button onclick="cacarArqueiro()">Caçar</button>  <button onclick="irAoVilarejoArqueiro()">Ir ao vilarejo?</button>`;
+}
+
+/********************************* Caçar Arqueiro ***********************************/
+function cacarArqueiro() {
+    let portalArqueiro = document.getElementById('saida');
+    portalArqueiro.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027056833078235177/cacarArqueiro.gif'>" + `<p><span class='nickName'>${name}</span>: Escolheu caçar!</p> <button onclick='EcontrandoAnimalArqueiro()'>Avançar</button>` ;
+}
+
+function EcontrandoAnimalArqueiro() {
+    let EcontrandoAnimalArqueiro = document.getElementById('saida');
+    EcontrandoAnimalArqueiro.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027080065370046475/Archer_9.gif'>" + `<p><span class='nickName'>${name}</span>: Animal localizado qual a melhor estrategia? </p> <button onclick="seAproximarAnimalArqueiro()">Se aproximar do animal?</button> <button onclick="matarAnimalArqueiro()">Matar o animal?</button>` ;
+
+}
+
+// Falha e volta para a escolha do vilarejo ou caçar!
+
+function seAproximarAnimalArqueiro() {
+    let  seAproximarAnimalArqueiro = document.getElementById('saida');
+    seAproximarAnimalArqueiro.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027089368843821137/Archer_loose.gif'>" + `<p><span class='nickName'>${name}</span>: Animal escapou! :( </p> <button onclick='andandoFlorestaArqueiro()'>Voltar para o caminho do vilarejo?</button>` ;
+}
+
+
+// caminho true
+function matarAnimalArqueiro() {
+    let  atacarAnimalArqueiro = document.getElementById('saida');
+    atacarAnimalArqueiro.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027087370224414760/Archer_winn_1.gif'>" + `<p><span class='nickName'>${name}</span>: Você matou o veado, agora partiu fazer aquele churras!!</p> <button onclick='fazerFogueiraArqueiro()'>Fazer fogueira</button>` ;
+}
+
+function fazerFogueiraArqueiro() {
+    let  fazerFogueiraArqueiro = document.getElementById('saida');
+    fazerFogueiraArqueiro.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027080447592771605/Archer_10.gif'>" + `<p><span class='nickName'>${name}</span>: Cozinhar o animal e comer uma parte!</p> <button onclick='voltandoCacaArqueiro()'>Avançar</button>` ;
+}
+
+function voltandoCacaArqueiro() {
+    let  voltandoCacaArqueiro = document.getElementById('saida');
+    voltandoCacaArqueiro.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027062484739301456/Archer_2.gif'>" + `<p><span class='nickName'>${name}</span>: Após essa refeição, ta na hora de ir ao vilarejo em busca de informações.</p> <button onclick='chegandoVilarejoArqueiro()'>Avançar</button>` ;
+}
+/******************************** Fim Caça ******************************************/
+
+
+/******************************** Vilarejo *****************************************/
+
+// indo ao vilarejo sem caçar!
+
+function irAoVilarejoArqueiro() {
+    let irAoVilarejoArqueiro = document.getElementById('saida');
+    irAoVilarejoArqueiro.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027059922724196362/IrParaVilaArqueiro.gif'>" + `<p><span class='nickName'>${name}</span>:Foi em direção ao vilarejo por informações ignorando sua fome.</p>  <button onclick="chegandoVilarejoArqueiro()">Avançar</button>` ;
+}
+
+// continuação vilarejo!
+function irAoVilarejoArqueiroCaca() {
+    let irAoVilarejoArqueiroCaca = document.getElementById('saida');
+    irAoVilarejoArqueiroCaca.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027059922724196362/IrParaVilaArqueiro.gif'>" + `<p><span class='nickName'>${name}</span>:Explora a floresta poucos passos a frente à vista um vilarejo, la seria um otimo local para buscar informações. Estamos com muita fome essa floresta habitam muitos animais, caçar seria uma otima idea.</p> <button onclick="cacarArqueiro()">Caçar</button>  <button onclick="IrAoVilarejoArqueiro()">Ir ao vilarejo?</button>`;
+}
+
+function chegandoVilarejoArqueiro() {
+    let  chegandoVilarejoArqueiro = document.getElementById('saida');
+    chegandoVilarejoArqueiro.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027062666965041223/Archer_3.gif'>" + `<p><span class='nickName'>${name}</span>:  Entrou na vila, Habitantes comentam que a taberna costuma ser um lugar movimentado, talvez lá haja uma pista?</p> <button onclick='aproximarTavernaArqueiro()'>Ir a taberna</button>`;
+}
+
+
+/******************************** Taverna Arqueiro *********************************/
+
+function aproximarTavernaArqueiro() {
+    let  aproximarTavernaArqueiro = document.getElementById('saida');
+    aproximarTavernaArqueiro.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027064366845132880/Archer_4.gif'>" + `<p><span class='nickName'>${name}</span>: Caminha até a porta da taberna observando o vilarejo.</p> <button onclick='entrandoTavernaArqueiro()'>Entrar na taberna</button>` ;
+}
+
+// ambos vão ao homem misterioso!
+function entrandoTavernaArqueiro() {
+    let  EntrandoTavernaArqueiro = document.getElementById('saida');
+    EntrandoTavernaArqueiro.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027070159711637504/Archer_5.gif'>" + `<p><span class='nickName'>${name}</span>:  Entrou na taberna em busca por informações. Talvez o dono da taberna tenha elas ou aquele sujeito estranho la atrás?</p> <button onclick='indoAteMesaBarArqueiro()'>Tomar uma breja?</button> <button onclick="falarComDesconhecidoArqueiro()">Ir direto ao homem estranho</button>` ;
+}
+
+function indoAteMesaBarArqueiro() {
+    let  indoAteMesaBarArqueiro = document.getElementById('saida');
+    indoAteMesaBarArqueiro.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027070158927310849/Archer_6.gif'>" + `<p><span class='nickName'>${name}</span>: Tomamos nossa breja perguntamos ao dono sobre informações, e ele disse <strong>Dono do bar:</strong> aquele sujeito no fundo da taberna é um homem que pode te dar muitas informações.</p>  <button onclick="falarComDesconhecidoAposArqueiro()">Ir ao homem misterioso</button>`;
+}
+
+// indo direto ao darius!
+function falarComDesconhecidoArqueiro() {
+    let  falarComDesconhecidoArqueiro = document.getElementById('saida');
+    falarComDesconhecidoArqueiro.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027083965653327872/Archer_12.gif'>" + `<p><span class='nickName'>${name}</span>:   Vai até o homem misterioso, este homem se chama <i>Darius</i> pedimos informações, ele é um dos guardiões dessas terras <strong>Darius</strong>: sinto muito o que aconteceu no seu reino, quem está por trás disso irá pagar. Ouvi um boato que um necromante foi visto com um objeto brilhoso e invocando criaturas por ai: ele se encontra no topo da montanha.</p> <button onclick='olharParaRonaArqueiro()'>Avançar</button>` ;
+}
+
+// Após tomar uma breja ir falar com o desconhecido
+function falarComDesconhecidoAposArqueiro() {
+    let  falarComDesconhecidoApoArqueiro = document.getElementById('saida');
+    falarComDesconhecidoApoArqueiro.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027083991658016858/Archer_11.gif'>" + `<p><span class='nickName'>${name}</span>:  Vai até o homem misterioso, este homem se chama <i>Darius</i> pedimos informações, ele é um dos guardiões dessas terras <strong>Darius</strong>: sinto muito o que aconteceu no seu reino, quem está por trás disso irá pagar. Ouvi um boato que um necromante foi visto com um objeto brilhoso e invocando criaturas por ai: ele se encontra no topo da montanha.</p>  <button onclick="olharParaRonaArqueiro()">Avançar</button>`;
+}
+
+function olharParaRonaArqueiro() {
+    let  olharParaRonaArqueiro = document.getElementById('saida');
+    olharParaRonaArqueiro.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027088624036102184/archer_13.gif'>" + `<p><span class='nickName'>${name}</span>:  Anão meche com a moça que estava bebendo, e não sai do pé dela dizem que esse anão tem um esquadrão de saqueadores</p>  <button onclick="atacarAnaoArqueiro()">Ajudar?</button> <button onclick="ignorarRonaArqueiro()">Sair da taberna?</button>`;
+}
+
+function atacarAnaoArqueiro() {
+    let  atacarAnaoArqueiro = document.getElementById('saida');
+    atacarAnaoArqueiro.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027091137128824903/A5B._1_Archer_Help_Intimate3.gif'>" + `<p><span class='nickName'>${name}</span>:  Nocauteo o anão, ajudando a moça, como se chama? <strong> Me chamo Rona sou uma viking</strong> Obrigada pela ajuda, não queria deixar esse pobre coitado em coma, <span class='nickName'>${name}</span>: o problema que os amigos dele não gostaram muito <strong>Rona</strong>: que venham!!!</p>  <button onclick="atacarSquadAnoesArqueiro()">Avançar</button>`;
+}
+
+
+function atacarSquadAnoesArqueiro() {
+    let  atacarAnaoMago = document.getElementById('saida');
+    atacarAnaoMago.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027107390799228928/A5B._3_Knight_Fight_1.gif'>" + `<p><span class='nickName'>${name}</span>: Todos foram derrotados!, <strong>Rona</strong>: Obrigado mais uma vez pela sua ajuda boa sorte na sua ventura!!</p>  <button onclick="atacarSquadAnoesMago()">Atacar!</button>`;
+}
 
 
 
@@ -220,6 +367,156 @@ function atacarAnoesGuerreiro() {
 
 
 /******************************** Caminho Mago *************************************/
+function caminhoMago() {
+    let inicio2 = document.getElementById('saida');
+    name = prompt("Digite o nome do seu personagem!");
+    inicio2.innerHTML = " <img src='https://cdn.discordapp.com/attachments/773371651885760533/1027094021329408111/Mage.gif'> <p> <span class = 'nickName'>nome do seu personagem: " + name + "</span> | Rei: Conclua sua missão o reino precisa de você!, para não chamar atenção passe pela passagem secreta atrás do reino.</p>   <button onclick='sairDoReinoMago()'>Avançar</button>" ;
+}
+
+function sairDoReinoMago() {
+  let sairDoReino = document.getElementById('saida');
+  sairDoReino.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027094021786574888/Exit_Wizard.gif'>" + `<p><span class='nickName'>${name}</span>:Saindo da arena e indo em direção a passagem secreta do reino, para pegarmos o portal para o outro núcleo</p> <button onclick='entrandoNaCavernaMago()'>Avançar</button>`;
+}
+
+function entrandoNaCavernaMago() {
+   let entrandoNaCaverna = document.getElementById('saida');
+   entrandoNaCaverna.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027094022772232192/Wizard.gif'>" + `<p><span class='nickName'>${name}</span>: Entra na passagem secreta!</p> <button onclick='explorandoCavernaMago()'>Avançar</button>`;
+}
+
+function explorandoCavernaMago() {
+    let explorandoCaverna = document.getElementById('saida');
+    explorandoCaverna.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027094020440215572/Wizard_1.gif'>" + `<p><span class='nickName'>${name}</span>: No meio da passagem secreta encontramos um urso, precisamos passar por ele para pegar o portal no fim da caverna!</p> <button onclick='MatarUrsoMago()'>Usar Magia</button>` ;
+}
+
+function MatarUrsoMago() {
+    let matarUrso = document.getElementById('saida');
+    matarUrso.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027094022302474262/Wizard_2.gif'>" + `<p><span class='nickName'>${name}</span>: Use sua magia para atacar o urso!!</p> <button onclick='entraPortalMago()'>Avançar</button>` ;
+}
+
+function entraPortalMago() {
+    let portalArqueiro = document.getElementById('saida');
+    portalArqueiro.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027094020909965342/Wizard_3.gif'>" + `<p><span class='nickName'>${name}</span>: Avança para o proximo núcleo do reino que esta no nosso tempo atual, mas com frequente ataques de criaturas, e boatos de um necromante que possui a segunda parte do <strong>medalhão.</p>  <button onclick='chegandoNoMedievalMago()'>Avançar</button>` ;
+}
+
+function chegandoNoMedievalMago() {
+    let portalArqueiro = document.getElementById('saida');
+    portalArqueiro.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027094019244822589/Wizard_4.gif'>" + `<p><span class='nickName'>${name}</span>: Tudo em nossa volta muda. Se encontramos em uma floresta.</p> <button onclick='andandoFlorestaMago()'>Avançar</button>` ;
+}
+
+
+function andandoFlorestaMago() {
+    let andandoFloresta = document.getElementById('saida');
+    andandoFloresta.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027094018166890617/Wizzard.gif'>" + `<p><span class='nickName'>${name}</span>:Explora a floresta poucos passos a frente à vista um vilarejo, la seria um otimo local para buscar informações. Estamos com muita fome essa floresta habitam muitos animais, caçar seria uma otima idea.</p> <button onclick="cacarMago()">Caçar</button>  <button onclick="irAoVilarejoMago()">Ir ao vilarejo?</button>`;
+}
+
+/********************************* Caçar Mago ***********************************/
+function cacarMago() {
+    let portalMago = document.getElementById('saida');
+    portalMago.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027104857410244668/Wizzard_8.gif'>" + `<p><span class='nickName'>${name}</span>: Escolheu caçar!</p> <button onclick='EcontrandoAnimalMago()'>Avançar</button>` ;
+}
+
+function EcontrandoAnimalMago() {
+    let EcontrandoAnimalMago = document.getElementById('saida');
+    EcontrandoAnimalMago.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027100343106031686/Wizzard_3.gif'>" + `<p><span class='nickName'>${name}</span>: Animal localizado qual a melhor estrategia? </p> <button onclick="seAproximarAnimalMago()">Se aproximar do animal?</button> <button onclick="matarAnimalMago()">Matar o animal?</button>` ;
+
+}
+
+// Falha e volta para a escolha do vilarejo ou caçar!
+
+function seAproximarAnimalMago() {
+    let  seAproximarAnimalMago = document.getElementById('saida');
+    seAproximarAnimalMago.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027100341742866452/Wizzard_Loose.gif'>" + `<p><span class='nickName'>${name}</span>: Animal escapou! :( </p> <button onclick='andandoFlorestaMago()'>Voltar para o caminho do vilarejo?</button>` ;
+}
+
+
+// caminho true
+function matarAnimalMago() {
+    let  atacarAnimalMago = document.getElementById('saida');
+    atacarAnimalMago.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027103489781944390/Wizzard_Win_1.gif'>" + `<p><span class='nickName'>${name}</span>: Você matou o coelho, agora partiu fazer aquele churras!!</p> <button onclick='fazerFogueiraMago()'>Fazer fogueira</button>` ;
+}
+
+function fazerFogueiraMago() {
+    let  fazerFogueiraMago = document.getElementById('saida');
+    fazerFogueiraMago.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027100345215762472/Wizzard_CampFire.gif'>" + `<p><span class='nickName'>${name}</span>: Cozinhar o animal e comer uma parte!</p> <button onclick='voltandoCacaMago()'>Avançar</button>` ;
+}
+
+function voltandoCacaMago() {
+    let  voltandoCacaMago = document.getElementById('saida');
+    voltandoCacaMago.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027100342158114846/Wizzard_4.gif'>" + `<p><span class='nickName'>${name}</span>: Após essa refeição, ta na hora de ir ao vilarejo em busca de informações.</p> <button onclick='chegandoVilarejoMago()'>Avançar</button>` ;
+}
+/******************************** Fim Caça ******************************************/
+
+
+/******************************** Vilarejo *****************************************/
+
+// indo ao vilarejo sem caçar!
+
+function irAoVilarejoMago() {
+    let irAoVilarejoMago = document.getElementById('saida');
+    irAoVilarejoMago.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027094019873968158/Wizzard_1.gif'>" + `<p><span class='nickName'>${name}</span>:Foi em direção ao vilarejo por informações ignorando sua fome.</p>  <button onclick="chegandoVilarejoMago()">Avançar</button>` ;
+}
+
+// continuação vilarejo!
+function irAoVilarejoMagoCaca() {
+    let irAoVilarejoMagoCaca = document.getElementById('saida');
+    irAoVilarejoMagoCaca.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027059922724196362/IrParaVilaMago.gif'>" + `<p><span class='nickName'>${name}</span>:Explora a floresta poucos passos a frente à vista um vilarejo, la seria um otimo local para buscar informações. Estamos com muita fome essa floresta habitam muitos animais, caçar seria uma otima idea.</p> <button onclick="cacarMago()">Caçar</button>  <button onclick="IrAoVilarejoMago()">Ir ao vilarejo?</button>`;
+}
+
+function chegandoVilarejoMago() {
+    let  chegandoVilarejoMago = document.getElementById('saida');
+    chegandoVilarejoMago.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027100343504490596/Wizzard_5.gif'>" + `<p><span class='nickName'>${name}</span>:  Entrou na vila, Habitantes comentam que a taberna costuma ser um lugar movimentado, talvez lá haja uma pista?</p> <button onclick='aproximarTavernaMago()'>Ir a taberna</button>`;
+}
+
+
+/******************************** Taverna Mago *********************************/
+
+function aproximarTavernaMago() {
+    let  aproximarTavernaMago = document.getElementById('saida');
+    aproximarTavernaMago.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027100342640459816/Wizzard_6.gif'>" + `<p><span class='nickName'>${name}</span>: Caminha até a porta da taberna observando o vilarejo.</p> <button onclick='entrandoTavernaMago()'>Entrar na taberna</button>` ;
+}
+
+function entrandoTavernaMago() {
+    let  EntrandoTavernaMago = document.getElementById('saida');
+    EntrandoTavernaMago.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027103348178047016/Mage_7.gif'>" + `<p><span class='nickName'>${name}</span>:  Entrou na taberna em busca por informações. Talvez o dono da taberna tenha elas ou aquele sujeito estranho la atrás?</p> <button onclick='indoAteMesaBarMago()'>Tomar uma breja?</button> <button onclick="falarComDesconhecidoMago()">Ir direto ao homem estranho</button>` ;
+}
+
+function indoAteMesaBarMago() {
+    let  indoAteMesaBarMago = document.getElementById('saida');
+    indoAteMesaBarMago.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027100344582426684/Mage_2.gif'>" + `<p><span class='nickName'>${name}</span>: Tomamos nossa breja perguntamos ao dono sobre informações, e ele disse <strong>Dono do bar:</strong> aquele sujeito no fundo da taberna é um homem que pode te dar muitas informações.</p>  <button onclick="falarComDesconhecidoAposMago()">Ir ao homem misterioso</button>`;
+}
+
+// ambos vão ao homem misterioso!
+
+function falarComDesconhecidoMago() {
+    let  falarComDesconhecidoMago = document.getElementById('saida');
+    falarComDesconhecidoMago.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027100343898751008/Wizzard_7.gif'>" + `<p><span class='nickName'>${name}</span>:   Vai até o homem misterioso, este homem se chama <i>Darius</i> pedimos informações, ele é um dos guardiões dessas terras <strong>Darius</strong>: sinto muito o que aconteceu no seu reino, quem está por trás disso irá pagar. Ouvi um boato que um necromante foi visto com um objeto brilhoso e invocando criaturas por ai: ele se encontra no topo da montanha.</p> <button onclick='olharParaRonaMago()'>Avançar</button>` ;
+}
+
+// Após tomar uma breja ir falar com o desconhecido
+function falarComDesconhecidoAposMago() {
+    let  falarComDesconhecidoApoMago = document.getElementById('saida');
+    falarComDesconhecidoApoMago.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027102428065173554/Mage_6.gif'>" + `<p><span class='nickName'>${name}</span>:  Vai até o homem misterioso, este homem se chama <i>Darius</i> pedimos informações, ele é um dos guardiões dessas terras <strong>Darius</strong>: sinto muito o que aconteceu no seu reino, quem está por trás disso irá pagar. Ouvi um boato que um necromante foi visto com um objeto brilhoso e invocando criaturas por ai: ele se encontra no topo da montanha.</p>  <button onclick="olharParaRonaMago()">Avançar</button>`;
+}
+
+function olharParaRonaMago() {
+    let  olharParaRonaMago = document.getElementById('saida');
+    olharParaRonaMago.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027100345551310928/Mage_5.gif'>" + `<p><span class='nickName'>${name}</span>:  Anão meche com a moça que estava bebendo, enão sai do pé dela dizem que esse anão tem um esquadrão de saqueadores</p>  <button onclick="atacarAnaoMago()">Ajudar?</button> <button onclick="ignorarRonaMago()">Sair da taberna?</button>`;
+}
+
+function atacarAnaoMago() {
+    let  atacarAnaoMago = document.getElementById('saida');
+    atacarAnaoMago.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027102673067061300/A5B._1_wizzard_Help_Intimate3.gif'>" + `<p><span class='nickName'>${name}</span>:  Nocauteo o anão, ajudando a moça, como se chama? <strong> Me chamo Rona sou uma viking</strong> Obrigada pela ajuda, não queria deixar esse pobre coitado em coma, <span class='nickName'>${name}</span>: o problema que os amigos dele não gostaram muito <strong>Rona</strong>: que venham!!!</p>  <button onclick="atacarSquadAnoesMago()">Atacar!</button>`;
+}
+
+function atacarSquadAnoesMago() {
+    let  atacarAnaoMago = document.getElementById('saida');
+    atacarAnaoMago.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027107390799228928/A5B._3_Knight_Fight_1.gif'>" + `<p><span class='nickName'>${name}</span>: Todos foram derrotados!, <strong>Rona</strong>: Obrigado mais uma vez pela sua ajuda boa sorte na sua ventura!!</p>  <button onclick="atacarSquadAnoesMago()">Atacar!</button>`;
+}
+
+function ignorarRonaMago() {
+    let  atacarAnaoMago = document.getElementById('saida');
+    atacarAnaoMago.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027102673721376768/A5A._Mage_Dont_Help.gif'>" + `<p><span class='nickName'>${name}</span>: Ignoramos e seguimos em frente afinal temos uma missão importante cada segundo importa!!</p>  <button onclick="">Avançar</button>`;
+}
 
 /******************************** Fim do caminho Mago **************************/
 
