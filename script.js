@@ -108,19 +108,33 @@ function entraPortalGuerreiro() {
 
 function ChegandoNoMedievalGuerreiro() {
     let chegandoNoMedieval = document.getElementById('saida');
-    chegandoNoMedieval.innerHTML = "<img src=''>" + `<p><span class='nickName'>${name}</span>: Tudo em nossa volta muda. Se encontramos em uma floresta.</p> <button onclick="andandoFlorestaGuerreiro()">Avançar</button>`;
+    chegandoNoMedieval.innerHTML = "<img src='cenas_cap/EntrandoCavernaGuerreiro.gif'>" + `<p><span class='nickName'>${name}</span>: Tudo em nossa volta muda. Se encontramos em uma floresta.</p> <button onclick="andandoFlorestaGuerreiro()">Avançar</button>`;
 }
-
-// talvez aqui de merda alerta!!!
 
 function andandoFlorestaGuerreiro() {
     let andandoFloresta = document.getElementById('saida');
-    andandoFloresta.innerHTML = "<img src=''>" + `<p><span class='nickName'>${name}</span>:</p> <button onclick="fomeNaFlorestaGuerreiro()">Avançar</button>`;
+    andandoFloresta.innerHTML = "<img src='cenas_cap/ExplorandoFlorestaGuerreiro.gif'>" + `<p><span class='nickName'>${name}</span>: Explora a floresta poucos passos a frente à vista um vilarejo, la seria um otimo local para buscar informações. Estamos com muita fome essa floresta habitam muitos animais, caçar seria uma otima idea. </p> <button onclick="cacarGuerreiro()">Caçar?</button>  <button onclick="irAoVilarejoGuerreiro">Ir ao vilarejo?</button>`;
 }
 
-function fomeNaFlorestaGuerreiro() {
-    let fomeNaFloresta = document.getElementById('saida');
-    fomeNaFloresta.innerHTML += "<img src=''>" + `<p><span class='nickName'>${name}</span>:</p> <button onclick="fomeNaFlorestaGuerreiro()">Avançar</button>`;
+function cacarGuerreiro() {
+   let cacar = document.getElementById('saida');
+   cacar.innerHTML = "<img src='cenas_cap/caçarGuerreiro.gif'>" + `<p><span class='nickName'>${name}</span>: Escolheu caçar!<p/> <button onclick="EcontrandoAnimalGuerreiro()">Avançar</button>`;
+}
+
+function EcontrandoAnimalGuerreiro() {
+    let encontrandoAnimal = document.getElementById('saida');
+    encontrandoAnimal.innerHTML = "<img src='cenas_cap/aproximarAnimalGuerreiro.gif'>" + `<p><span class='nickName'>${name}</span>: Animal localizado qual a melhor estrategia? </p> <button onclick="seAproximarAnimalGuerreiro()">Se aproximar do animal?</button> <button onclick="matarAnimalGuerreiro()">Matar o animal?</button>` ;
+}
+
+// Falha e volta para a escolha do vilarejo ou caçar!
+function seAproximarAnimalGuerreiro() {
+  let aproximarDoAnimal = document.getElementById('saida');
+  aproximarDoAnimal.innerHTML = "<img src='cenas_cap/AnimalFogeGuerreiro.gif'>" + `<p><span class='nickName'>${name}</span>:Animal escapou! :( <p/> <button onclick="andandoFlorestaGuerreiro()">Voltar para o caminho do vilarejo?</button>`;
+}
+
+// caminho true!!!
+function matarAnimalGuerreiro() {
+   let matarAnimal = document.getElementById('saida');
 }
 
 
