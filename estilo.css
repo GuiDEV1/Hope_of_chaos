@@ -19,7 +19,7 @@ header {
 
 header img {
     width: 13vw;
-    min-width: none;
+    min-width: 13vw;
     max-width: 17vw;
     min-inline-size: 10%;
 }
