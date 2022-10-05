@@ -211,6 +211,10 @@ function atacarAnoesGuerreiro() {
 }
 
 
+
+/**************************       Fim caminho guerreiro         ***************************************** */
+
+
 /******************************** Caminho Arqueiro *************************************/
 function caminhoArqueiro () {
     let inicio2 = document.getElementById('saida');
@@ -357,7 +361,7 @@ function atacarAnaoArqueiro() {
 
 function atacarSquadAnoesArqueiro() {
     let  atacarAnaoMago = document.getElementById('saida');
-    atacarAnaoMago.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027107390799228928/A5B._3_Knight_Fight_1.gif'>" + `<p><span class='nickName'>${name}</span>: Todos foram derrotados!, <strong>Rona</strong>: Obrigado mais uma vez pela sua ajuda boa sorte na sua ventura!!</p>  <button onclick="atacarSquadAnoesMago()">Atacar!</button>`;
+    atacarAnaoMago.innerHTML = "<img src='https://media.discordapp.net/attachments/773372240686350356/1027193487394873394/Archer3.gif?width=770&height=578'>" + `<p><span class='nickName'>${name}</span>: Todos foram derrotados!, <strong>Rona</strong>: Obrigado mais uma vez pela sua ajuda boa sorte na sua ventura!!</p>  <button onclick="atacarSquadAnoesMago()">Atacar!</button>`;
 }
 
 
@@ -515,7 +519,7 @@ function atacarSquadAnoesMago() {
 
 function ignorarRonaMago() {
     let  atacarAnaoMago = document.getElementById('saida');
-    atacarAnaoMago.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027102673721376768/A5A._Mage_Dont_Help.gif'>" + `<p><span class='nickName'>${name}</span>: Ignoramos e seguimos em frente afinal temos uma missão importante cada segundo importa!!</p>  <button onclick="">Avançar</button>`;
+    atacarAnaoMago.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773372240686350356/1027194417276264458/Wizzard.gif'>" + `<p><span class='nickName'>${name}</span>: Ignoramos e seguimos em frente afinal temos uma missão importante cada segundo importa!!</p>  <button onclick="">Avançar</button>`;
 }
 
 /******************************** Fim do caminho Mago **************************/
