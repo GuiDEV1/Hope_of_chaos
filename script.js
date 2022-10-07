@@ -197,7 +197,7 @@ function discussaoGuerreiro() {
 
 function sairDaTabernaRGuerreiro() {
    let sairTaberna = document.getElementById('saida');
-   sairTaberna.innerHTML = "<img src='https://media.discordapp.net/attachments/834862603792285717/1027087933934665758/A5A._Knight_Dont_Help.gif?width=809&height=607'>" + `<p><span class='nickName'>${name}</span>: Ignoramos e seguimos em frente afinal temos uma missão importante cada segundo importa!! </p>`;
+   sairTaberna.innerHTML = "<img src='https://media.discordapp.net/attachments/834862603792285717/1027087933934665758/A5A._Knight_Dont_Help.gif?width=809&height=607'>" + `<p><span class='nickName'>${name}</span>: Ignoramos e seguimos em frente afinal temos uma missão importante cada segundo importa!! </p> <button onclick="irAmontanhaGuerreiro()">Avançar</button>`;
 }
 
 function ajudarMulherGuerreiro() {
@@ -207,9 +207,32 @@ function ajudarMulherGuerreiro() {
 
 function atacarAnoesGuerreiro() {
     let atacarAnoes = document.getElementById('saida');
-    atacarAnoes.innerHTML = "<img src='https://media.discordapp.net/attachments/834862603792285717/1027095229716779028/A5B._3_Knight_Fight.gif?width=809&height=607'>" + `<p><span class='nickName'>${name}</span>: Todos foram derrotados!, <strong>Rona</strong>: Obrigado mais uma vez pela sua ajuda boa sorte na sua ventura!!</p>` ;
+    atacarAnoes.innerHTML = "<img src='https://media.discordapp.net/attachments/834862603792285717/1027095229716779028/A5B._3_Knight_Fight.gif?width=809&height=607'>" + `<p><span class='nickName'>${name}</span>: Todos foram derrotados!, <strong>Rona</strong>: Obrigado mais uma vez pela sua ajuda boa sorte na sua ventura!! <span class='nickName'>${name}</span>: de nada , você é uma mulher muito forte foi uma honra lutar ao seu lado agora partirei para o topo da montanha, o nosso tempo curto. </p> <button onclick="irAmontanhaGuerreiro()">Avançar</button> ` ;
 }
 
+function irAmontanhaGuerreiro () {
+    let irAmontanha = document.getElementById('saida');
+    irAmontanha.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773372240686350356/1027708232199852074/Knight_6.gif'>" + `<p><span class='nickName'>${name}</span>: Chegamos a entrada da montanha!. Está decendo uma caveira deve ser do exército do necromante.</p> <button onclick="subirAmontanhaGuerreiro()">Matar esqueleto</button>`;
+}
+
+function subirAmontanhaGuerreiro() {
+    let subirMontanha =  document.getElementById('saida');
+    subirMontanha.innerHTML = "<img src='https://media.discordapp.net/attachments/773372240686350356/1027708229863612517/Knight_7.gif?width=766&height=575'>" + `<p><span class='nickName'>${name}</span>: Executou o esqueleto agora posso seguir em frente!</p> <button onclick="subirAmontanhaGuerreiro2()">Avançar</button>`;
+}
+
+function subirAmontanhaGuerreiro2() {
+    let subirAmontanha2 = document.getElementById('saida');
+    subirAmontanha2.innerHTML = "<img src='https://media.discordapp.net/attachments/773372240686350356/1027708229452582953/Knight_8.gif?width=766&height=575'>" + `<p><span class='nickName'>${name}</span>: O necomante estará logo acima!</p> <button onclick="chegandoAoNecromanteGuerreiro()">Avançar</button>` ;
+}
+
+function chegandoAoNecromanteGuerreiro() {
+    let chgegandoAoNecromante = document.getElementById('saida');
+    chgegandoAoNecromante.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773372240686350356/1027723090454659122/Knight_9.gif'>" + `<p><span class='nickName'>${name}</span>: Finalmente cheguei até o necromante preciso passar por ele!!</p> <button onclick="lutandoContraAoNecromanteGuerreiro()">teste</button>`;
+}
+
+function lutandoContraAoNecromanteGuerreiro() {
+
+}
 
 
 /**************************       Fim caminho guerreiro         ***************************************** */
@@ -353,6 +376,11 @@ function olharParaRonaArqueiro() {
     olharParaRonaArqueiro.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027088624036102184/archer_13.gif'>" + `<p><span class='nickName'>${name}</span>:  Anão meche com a moça que estava bebendo, e não sai do pé dela dizem que esse anão tem um esquadrão de saqueadores</p>  <button onclick="atacarAnaoArqueiro()">Ajudar?</button> <button onclick="ignorarRonaArqueiro()">Sair da taberna?</button>`;
 }
 
+function ignorarRonaArqueiro() {
+    let sairTaberna = document.getElementById('saida');
+    sairTaberna.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773372240686350356/1027726760785235988/A5A._Archer_Dont_Help.gif'>" + `<p><span class='nickName'>${name}</span>: Ignoramos e seguimos em frente afinal temos uma missão importante cada segundo importa!! </p> <button onclick="irAmontanhaArqueiro()">Avançar</button>`;
+}
+
 function atacarAnaoArqueiro() {
     let  atacarAnaoArqueiro = document.getElementById('saida');
     atacarAnaoArqueiro.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027091137128824903/A5B._1_Archer_Help_Intimate3.gif'>" + `<p><span class='nickName'>${name}</span>:  Nocauteo o anão, ajudando a moça, como se chama? <strong> Me chamo Rona sou uma viking</strong> Obrigada pela ajuda, não queria deixar esse pobre coitado em coma, <span class='nickName'>${name}</span>: o problema que os amigos dele não gostaram muito <strong>Rona</strong>: que venham!!!</p>  <button onclick="atacarSquadAnoesArqueiro()">Avançar</button>`;
@@ -361,10 +389,30 @@ function atacarAnaoArqueiro() {
 
 function atacarSquadAnoesArqueiro() {
     let  atacarAnaoMago = document.getElementById('saida');
-    atacarAnaoMago.innerHTML = "<img src='https://media.discordapp.net/attachments/773372240686350356/1027193487394873394/Archer3.gif?width=770&height=578'>" + `<p><span class='nickName'>${name}</span>: Todos foram derrotados!, <strong>Rona</strong>: Obrigado mais uma vez pela sua ajuda boa sorte na sua ventura!!</p>  <button onclick="atacarSquadAnoesMago()">Atacar!</button>`;
+    atacarAnaoMago.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773372240686350356/1027702625694658571/Archer3_1.gif'>" +  `<p><span class='nickName'>${name}</span>: Todos foram derrotados!, <strong>Rona</strong>: Obrigado mais uma vez pela sua ajuda boa sorte na sua ventura!! <span class='nickName'>${name}</span>: de nada , você é uma mulher muito forte foi uma honra lutar ao seu lado agora partirei para o topo da montanha, o nosso tempo curto. </p> <button onclick="irAmontanhaArqueiro()">Avançar</button> ` ;
 }
 
+function irAmontanhaArqueiro() {
+    let irAmontanha = document.getElementById('saida');
+    irAmontanha.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773372240686350356/1027729479243669525/Archer.gif'>" + `<p><span class='nickName'>${name}</span>: Chegamos a entrada da montanha!. Está decendo uma caveira deve ser do exército do necromante.</p> <button onclick="subirAmontanhaArqueiro()">Matar esqueleto</button>`;
+}
 
+function subirAmontanhaArqueiro() {
+    let subirMontanha =  document.getElementById('saida');
+    subirMontanha.innerHTML = "<img src='https://media.discordapp.net/attachments/773372240686350356/1027729478438375467/archer_1.gif?width=766&height=575'>" + `<p><span class='nickName'>${name}</span>: Executou o esqueleto agora posso seguir em frente!</p> <button onclick="subirAmontanhaArqueiro2()">Avançar</button>`;
+}
+
+function subirAmontanhaArqueiro2() {
+    let subirAmontanha2 = document.getElementById('saida');
+    subirAmontanha2.innerHTML = "<img src='https://media.discordapp.net/attachments/773372240686350356/1027729478098616410/archer_2.gif?width=766&height=575'>" + `<p><span class='nickName'>${name}</span>: O necomante estará logo acima!</p> <button onclick="chegandoAoNecromanteArqueiro()">Avançar</button>` ;
+}
+
+function chegandoAoNecromanteArqueiro() {
+    let chgegandoAoNecromante = document.getElementById('saida');
+    chgegandoAoNecromante.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773372240686350356/1027729477666603059/Archer_3.gif'>" + `<p><span class='nickName'>${name}</span>: Finalmente cheguei até o necromante preciso passar por ele!!</p> <button onclick="lutandoContraAoNecromanteArqueiro()">teste</button>`;
+}
+
+function lutandoContraAoNecromanteArqueiro() {}
 
 /******************************** Fim do caminho Arqueiro **************************/
 
@@ -514,12 +562,36 @@ function atacarAnaoMago() {
 
 function atacarSquadAnoesMago() {
     let  atacarAnaoMago = document.getElementById('saida');
-    atacarAnaoMago.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773371651885760533/1027107390799228928/A5B._3_Knight_Fight_1.gif'>" + `<p><span class='nickName'>${name}</span>: Todos foram derrotados!, <strong>Rona</strong>: Obrigado mais uma vez pela sua ajuda boa sorte na sua ventura!!</p>  <button onclick="atacarSquadAnoesMago()">Atacar!</button>`;
+    atacarAnaoMago.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773372240686350356/1027702760461848667/Wizzard_1.gif'>" + `<p><span class='nickName'>${name}</span>: Todos foram derrotados!, <strong>Rona</strong>: Obrigado mais uma vez pela sua ajuda boa sorte na sua ventura!! <span class='nickName'>${name}</span>: de nada , você é uma mulher muito forte foi uma honra lutar ao seu lado agora partirei para o topo da montanha, o nosso tempo curto. </p> <button onclick="irAmontanhaMago()">Avançar</button> ` ;
 }
 
 function ignorarRonaMago() {
-    let  atacarAnaoMago = document.getElementById('saida');
-    atacarAnaoMago.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773372240686350356/1027194417276264458/Wizzard.gif'>" + `<p><span class='nickName'>${name}</span>: Ignoramos e seguimos em frente afinal temos uma missão importante cada segundo importa!!</p>  <button onclick="">Avançar</button>`;
+    let  sairDaTaberna = document.getElementById('saida');
+    sairDaTaberna.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773372240686350356/1027735715603292201/A5A._Mage_Dont_Help_1.gif'>" + `<p><span class='nickName'>${name}</span>: Ignoramos e seguimos em frente afinal temos uma missão importante cada segundo importa!!</p>  <button onclick="irAmontanhaMago()">Avançar</button>`;
+}
+
+function irAmontanhaMago() {
+    let irAmontanha = document.getElementById('saida');
+    irAmontanha.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773372240686350356/1027737589639290880/Wizzard_2.gif'>" + `<p><span class='nickName'>${name}</span>: Chegamos a entrada da montanha!. Está decendo uma caveira deve ser do exército do necromante.</p> <button onclick="subirAmontanhaMago()">Matar esqueleto</button>`;
+}
+
+function subirAmontanhaMago() {
+    let subirMontanha =  document.getElementById('saida');
+    subirMontanha.innerHTML = "<img src='https://media.discordapp.net/attachments/773372240686350356/1027737589010153564/Wizard.gif?width=766&height=575'>" + `<p><span class='nickName'>${name}</span>: Executou o esqueleto agora posso seguir em frente!</p> <button onclick="subirAmontanhaMgo2()">Avançar</button>`;
+}
+
+function subirAmontanhaMgo2() {
+    let subirAmontanha2 = document.getElementById('saida');
+    subirAmontanha2.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773372240686350356/1027737588632666173/Wizard_1.gif'>" + `<p><span class='nickName'>${name}</span>: O necomante estará logo acima!</p> <button onclick="chegandoAoNecromanteMago()">Avançar</button>` ;
+}
+
+function chegandoAoNecromanteMago() {
+    let chgegandoAoNecromante = document.getElementById('saida');
+    chgegandoAoNecromante.innerHTML = "<img src='https://media.discordapp.net/attachments/773372240686350356/1027737588271951872/Wizzard_3.gif?width=766&height=575'>" + `<p><span class='nickName'>${name}</span>: Finalmente cheguei até o necromante preciso passar por ele!!</p> <button onclick="lutandoContraAoNecromanteMago()">teste</button>`;
+}
+
+function lutandoContraAoNecromanteMago() {
+    
 }
 
 /******************************** Fim do caminho Mago **************************/
