@@ -224,16 +224,61 @@ function subirAmontanhaGuerreiro2() {
     let subirAmontanha2 = document.getElementById('saida');
     subirAmontanha2.innerHTML = "<img src='https://media.discordapp.net/attachments/773372240686350356/1027708229452582953/Knight_8.gif?width=766&height=575'>" + `<p><span class='nickName'>${name}</span>: O necomante estará logo acima!</p> <button onclick="chegandoAoNecromanteGuerreiro()">Avançar</button>` ;
 }
-
+// inicio da luta contra o necromante
 function chegandoAoNecromanteGuerreiro() {
     let chgegandoAoNecromante = document.getElementById('saida');
-    chgegandoAoNecromante.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773372240686350356/1027723090454659122/Knight_9.gif'>" + `<p><span class='nickName'>${name}</span>: Finalmente cheguei até o necromante preciso passar por ele!!</p> <button onclick="lutandoContraAoNecromanteGuerreiro()">teste</button>`;
+    chgegandoAoNecromante.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773372240686350356/1027723090454659122/Knight_9.gif'>" + `<p><span class='nickName'>${name}</span>: Finalmente cheguei até o necromante preciso passar por ele!!</p> <button onclick="lutandoContraAoNecromanteGuerreiro()">provocar</button>`;
 }
 
 function lutandoContraAoNecromanteGuerreiro() {
-
+   let lutarContraOnecromente = document.getElementById('saida');
+   lutarContraOnecromente.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773372240686350356/1028859983896522792/Knight_10.gif'>" + `<p><span class='nickName'>${name}</span>: Não tenho medo de você, melhor tomar cuidado com o vento dos meus golpes não desmontalo ja que você é um puro osso <strong>Necromante:</strong> Vamos ver se você ira falar mais quando seus ossos fazerem parte do meu exérciro HAHAHAHA.</p> <button onclick='MatarNecromanteGuerreiro()'>Exterminar todos!</button>` ;
 }
 
+function MatarNecromanteGuerreiro() {
+     let matarNecromante = document.getElementById('saida') ;
+     matarNecromante.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773372240686350356/1028860193808850965/Knight31.gif'>" + `<p><span class='nickName'>${name}</span>: aaaaah ....</p> <button onclick='pegarPrimeiroMedalhaoGuerreiro()'>Pegar medalhão</button>`;
+}
+
+function pegarPrimeiroMedalhaoGuerreiro() {
+    let pegarPrimeiroMedalhao = document.getElementById('saida');
+        pegarPrimeiroMedalhao.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773372240686350356/1028860313212293125/Knight1.gif'>" + `<p><span class='nickName'>${name}</span>: Medalhão coletado!! , agora esse núcleo está em paz, hora de ir ao núcleo do futuro!.</p> <button onclick="indoParaOnucleoFuturistaGuerreiro()">Pegar portal</button>`;
+}
+
+function indoParaOnucleoFuturistaGuerreiro() {
+    let indoparaOfuturo = document.getElementById('saida');
+    indoparaOfuturo.innerHTML = "<img src='https://media.discordapp.net/attachments/773372240686350356/1028860423879008326/Knight4.gif?width=884&height=663'>" + `<p><span class='nickName'>${name}</span>: Entrou portal! </p> <button onclick="chegandoAoNucleoFuturista()">Avançar</button>`;
+}
+
+function chegandoAoNucleoFuturista() {
+  let chegandoAofuturo = document.getElementById('saida');
+  chegandoAofuturo.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773372240686350356/1028866989000753162/Knight1_1.gif'>" + `<p><span class='nickName'>${name}</span>:Finalmente estou perto de derrotar Hórus o destruidor de mundos e colcoar um fim nisso tudo, como esse lugar é estranho e cheio de luzes, consigo ouvir um barulho de longe e gritos preciso me aproximar</p> <button onclick="caminharNofuturoGuerreiro()">Caminhar</button>`;
+}
+
+function caminharNofuturoGuerreiro() {
+    let caminharNofuturo = document.getElementById('saida');
+    caminharNofuturo.innerHTML = "<img src='https://media.discordapp.net/attachments/773372240686350356/1028867144487800842/Knight1_2.gif?width=884&height=663'>" + `<p><span class='nickName'>${name}</span>: O barulho so aumenta cada vez mais ele está perto -- finalmente eu o encontrei <strong>Horús</strong>: Eu estava esperando por você soube que é <span class='nickName'>${name}</span> forte talvez me divirta um pouco HAHAHAHA <span class='nickName'>${name}</span>: Eu fiquei muito forte durante essa jornada você sera um oponente medíocre</p> <button onclick="derrotarHorusGuerreiro()">Lutar</button>`;
+}
+
+function derrotarHorusGuerreiro() {
+    let derrotarHorus = document.getElementById('saida');
+        derrotarHorus.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773372240686350356/1028867261517271080/Knight1_3.gif'>" + `<p><span class='nickName'>${name}</span>: A luta é intensa um erro de ambos os lados decidira o destino do nosso povo.</p> <button onclick="pegarUltimoMedalhaoGuerreiro()">Pegar medalhão</button>`;
+}
+
+function pegarUltimoMedalhaoGuerreiro() {
+      let pegarUltimoMedalhao = document.getElementById('saida');
+      pegarUltimoMedalhao.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773372240686350356/1028867551737938031/Knight1_4.gif'>" + `<p><span class='nickName'>${name}</span>: Finalmente recolhi todas as partes do medalhão agora tenho o grande poder antigo nas minhas mãos , eu posso ser o maior heroi se devolver para o reino e ter uma vida de gloria, ou posso usar pro meu uso própio e tudo ser meu agora que Horús foi derrotado ninguém me derrotaria, Preciso escolher se quero ir para o caminho bom ou mal!!</p> <button onclick="FinalBomGuerreiro()">Heroi</button> <button onclick="FinalRuimGuerreiro()">Vilão</button>`;
+}
+
+function FinalRuimGuerreiro() {
+    let finalRuim = document.getElementById('saida');
+    finalRuim.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773372240686350356/1028867689676017776/Evil.gif'>" + `<p><span class='nickName'>${name}</span>: Você se tornou um destruidor de mundos , causando destruição dominando realidades! <br> Fim..</p> <button onclick="inicio1()">Recomeçar</button>`;
+}
+
+function FinalBomGuerreiro() {
+  let  finalBom = document.getElementById('saida');
+    finalBom.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773372240686350356/1028867771804680262/Good_EnddingArcher2.gif'>" + `<p><span class='nickName'>${name}</span>: Você devolveu o medalhão para o reino, isso fez as realidades voltarem ao normal , se tornamos o maior heroi de todos os temos sempre seremos lembrados com grande honra!! <br> Fimm</p> <button onclick="inicio1()"></button>`;
+}
 
 /**************************       Fim caminho guerreiro         ***************************************** */
 
@@ -412,7 +457,7 @@ function chegandoAoNecromanteArqueiro() {
     chgegandoAoNecromante.innerHTML = "<img src='https://cdn.discordapp.com/attachments/773372240686350356/1027729477666603059/Archer_3.gif'>" + `<p><span class='nickName'>${name}</span>: Finalmente cheguei até o necromante preciso passar por ele!!</p> <button onclick="lutandoContraAoNecromanteArqueiro()">teste</button>`;
 }
 
-function lutandoContraAoNecromanteArqueiro() {}
+
 
 /******************************** Fim do caminho Arqueiro **************************/
 
